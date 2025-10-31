@@ -25,7 +25,14 @@ Outil de visualisation et d'édition de fichiers Markdown avec prévisualisation
 - ✅ **Auto-détection** : Recherche automatique dans Documentation/ et racine
 - ✅ **Affichage relatif** : Chemins relatifs pour une meilleure lisibilité
 
+## 🚀 Utilisation des sources
 
+### Installation et configuration
+
+Pour utiliser le projet à partir des sources, consultez les guides de compilation :
+
+- 📘 **[Guide de compilation (Français)](Documentation/COMPILATION_FR.md)** - Instructions détaillées en français
+- 📗 **[Compilation guide (English)](Documentation/COMPILATION_EN.md)** - Detailed instructions in English
 
 ## ⌨️ Raccourcis clavier
 
@@ -96,6 +103,7 @@ Le rendu HTML utilise un style professionnel inspiré de GitHub :
 ## 🔮 Améliorations futures possibles
 
 - [ ] Export PDF depuis la prévisualisation
+- [ ] Export HTML / PDF
 - [ ] Barre d'outils Markdown (boutons gras, italique, etc.)
 - [ ] Mode sombre / clair
 - [ ] Rechercher et remplacer
@@ -103,6 +111,13 @@ Le rendu HTML utilise un style professionnel inspiré de GitHub :
 - [ ] Prévisualisation des images locales
 - [ ] Vérification orthographique
 - [ ] Génération automatique de table des matières
+- [ ] Thèmes de couleurs
+- [ ] Préférences utilisateur
+- [ ] Historique des fichiers récents
+- [ ] Support des plugins Markdown
+- [ ] Auto-complétion Markdown
+- [ ] Aperçu des images
+- [ ] Support du drag & drop
 
 ## 📄 Licence
 
