@@ -1,0 +1,26 @@
+# =============================================================================
+# Requirements pour Markdown Viewer & Editor
+# Version: v0.100
+# Auteur: Christophe Pelichet
+# =============================================================================
+
+# Interface graphique Qt6
+# Note: PySide6_Addons inclut QtWebEngine pour Python 3.13+
+PySide6>=6.10.0
+
+# Conversion Markdown vers HTML
+markdown>=3.9.0
+
+# Pour la compilation avec PyInstaller (optionnel)
+pyinstaller>=6.16.0
+
+# =============================================================================
+# Installation:
+#   pip install -r requirements.txt
+#
+# Mise à jour:
+#   pip install --upgrade -r requirements.txt
+#
+# Note: Avec Python 3.13+, QtWebEngine est inclus dans PySide6_Addons
+#       et installé automatiquement avec PySide6
+# =============================================================================

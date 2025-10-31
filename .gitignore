@@ -1,0 +1,142 @@
+# =============================================================================
+# .gitignore pour Markdown Viewer & Editor
+# Version: v0.100
+# Auteur: Christophe Pelichet
+# =============================================================================
+
+# Environnement virtuel Python
+.venv/
+venv/
+env/
+ENV/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyo
+*.pyd
+.Python
+
+# Cache Python
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+.pyright/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec.bak
+
+# Fichiers de test
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.log
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# IDE - VSCode
+.vscode/
+*.code-workspace
+.history/
+.vscode-test/
+
+# IDE - PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# IDE - autres
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.orig
+
+# Fichiers système Windows
+desktop.ini
+$RECYCLE.BIN/
+
+# Fichiers système Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Fichiers spécifiques au projet
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache des dépendances
+.pip-cache/
+.cache/
+.npm/
+node_modules/
+
+# Fichiers de sauvegarde
+*.backup
+*~.nib
+*.bak~
+
+# Cache Qt
+.qt_cache/
+*.qm
+
+# =============================================================================
+# Fin du fichier .gitignore
+# =============================================================================
