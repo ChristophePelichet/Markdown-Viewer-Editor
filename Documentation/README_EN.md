@@ -2,6 +2,8 @@
 
 > **[🇫🇷 Version française](../README.md)** | 🇬🇧 English version
 
+**📥 [Download version v0.100](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v0.100)**
+
 Markdown file viewing and editing tool with real-time preview.
 
 ## 🎯 Features
@@ -58,25 +60,7 @@ The application includes a quick Markdown guide accessible via the "❓ Markdown
 - **Blockquotes** : `> quote`
 - **Tables** : `| Col 1 | Col 2 |`
 
-## 📁 Automatically detected files
-
-The tool automatically searches for these files:
-
-### Documentation/
-- `CHANGELOG_FR.md`
-- `CHANGELOG_EN.md`
-- `CHANGELOG_DE.md`
-- `README_FR.md`
-- `README_EN.md`
-- `README_DE.md`
-- All `*.md` files
-
-### Project root
-- `CHANGELOG.md`
-- `README.md`
-- All `*.md` files
-
-## 💾 Saving
+##  Saving
 
 ### Automatic confirmation
 - ✅ Before opening another file
@@ -102,6 +86,7 @@ HTML rendering uses a professional style inspired by GitHub:
 ## 🔮 Possible future improvements
 
 - [ ] PDF export from preview
+- [ ] HTML / PDF export
 - [ ] Markdown toolbar (bold, italic buttons, etc.)
 - [ ] Dark / light mode
 - [ ] Search and replace
@@ -109,6 +94,13 @@ HTML rendering uses a professional style inspired by GitHub:
 - [ ] Local image preview
 - [ ] Spell checking
 - [ ] Automatic table of contents generation
+- [ ] Color themes
+- [ ] User preferences
+- [ ] Recent files history
+- [ ] Markdown plugins support
+- [ ] Markdown auto-completion
+- [ ] Image preview
+- [ ] Drag & drop support
 
 ## 📄 License
 

@@ -2,6 +2,8 @@
 
 > 🇫🇷 **Version française** | **[🇬🇧 English version](Documentation/README_EN.md)**
 
+**📥 [Télécharger la version v0.100](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v0.100)**
+
 Outil de visualisation et d'édition de fichiers Markdown avec prévisualisation en temps réel.
 
 ## 🎯 Fonctionnalités
@@ -57,25 +59,6 @@ L'application inclut un guide rapide Markdown accessible via le bouton "❓ Aide
 - **Liens** : `[texte](url)`
 - **Citations** : `> citation`
 - **Tableaux** : `| Col 1 | Col 2 |`
-
-
-## 📁 Fichiers détectés automatiquement
-
-L'outil recherche automatiquement ces fichiers :
-
-### Documentation/
-- `CHANGELOG_FR.md`
-- `CHANGELOG_EN.md`
-- `CHANGELOG_DE.md`
-- `README_FR.md`
-- `README_EN.md`
-- `README_DE.md`
-- Tous les fichiers `*.md`
-
-### Racine du projet
-- `CHANGELOG.md`
-- `README.md`
-- Tous les fichiers `*.md`
 
 ## 💾 Sauvegarde
 
