@@ -37,8 +37,7 @@ Markdown file viewing and editing tool with real-time preview.
 ### Using the Source Code
 
 For detailed compilation and setup instructions, see:
-- 📗 **[Build Instructions](Documentation/BUILD_INSTRUCTIONS_EN.md)** - Complete setup guide
-- 📗 **[Compilation Guide](Documentation/COMPILATION_EN.md)** - Detailed compilation steps
+- 📗 **[Complete Documentation](Documentation/MARKDOWN_VIEWER_DOCUMENTATION.md)** - Full technical documentation
 
 **Quick start:**
 ```bash
