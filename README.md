@@ -39,25 +39,6 @@ Markdown file viewing and editing tool with real-time preview.
 For detailed compilation and setup instructions, see:
 - 📗 **[Complete Documentation](Documentation/MARKDOWN_VIEWER_DOCUMENTATION.md)** - Full technical documentation
 
-**Quick start:**
-```bash
-# Clone the repository
-git clone https://github.com/ChristophePelichet/Markdown-Viewer-Editor.git
-cd Markdown-Viewer-Editor
-
-# Create virtual environment
-python -m venv .venv
-
-# Activate environment (Windows)
-.venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-python markdown_viewer.py
-```
-
 ## ⌨️ Keyboard Shortcuts
 
 | Shortcut | Action |
@@ -118,23 +99,6 @@ HTML rendering uses a professional style inspired by GitHub:
 - Real-time Markdown to HTML conversion
 - QSettings for persistent preferences
 - WebEngine for professional HTML rendering
-
-## 🔮 Roadmap
-
-### Planned Features
-- [ ] HTML/PDF export
-- [ ] Markdown toolbar (bold, italic buttons, etc.)
-- [ ] Dark/light mode themes
-- [ ] Search and replace
-- [ ] Multiple open files (tabs)
-- [ ] Local image preview
-- [ ] Spell checking
-- [ ] Automatic table of contents
-- [ ] User preferences dialog
-- [ ] Recent files history
-- [ ] Markdown plugins support
-- [ ] Auto-completion
-- [ ] Drag & drop support
 
 ## 📄 License
 
