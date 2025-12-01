@@ -1,117 +1,154 @@
 # 📝 Markdown Viewer & Editor
 
-> 🇫🇷 **Version française** | **[🇬🇧 English version](Documentation/README_EN.md)**
+**📥 [Download version v0.100](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v0.100)**
 
-**📥 [Télécharger la version v0.100](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v0.100)**
+Markdown file viewing and editing tool with real-time preview.
 
-Outil de visualisation et d'édition de fichiers Markdown avec prévisualisation en temps réel.
+## 🎯 Features
 
-## 🎯 Fonctionnalités
+### Viewing
+- ✅ **Real-time preview** : HTML rendering of Markdown with professional CSS
+- ✅ **Split view** : Editor on the left, preview on the right
+- ✅ **Full Markdown support** : Tables, code, blockquotes, lists, links, images
+- ✅ **Syntax highlighting** : For code blocks
+- ✅ **Emojis** : Full Unicode emoji support
 
-### Visualisation
-- ✅ **Prévisualisation en temps réel** : Rendu HTML du Markdown avec CSS professionnel
-- ✅ **Split view** : Éditeur à gauche, prévisualisation à droite
-- ✅ **Support complet Markdown** : Tables, code, citations, listes, liens, images
-- ✅ **Coloration syntaxique** : Pour les blocs de code
-- ✅ **Emojis** : Support complet des emojis Unicode
+### Editing
+- ✅ **Monospace editor** : Consolas font for better readability
+- ✅ **Undo/Redo** : Ctrl+Z / Ctrl+Y
+- ✅ **Search** : Ctrl+F to search text
+- ✅ **Change detection** : Asterisk (*) in title if modified
+- ✅ **Confirmation before closing** : If the file has been modified
+- ✅ **Remember last directory** : Automatically opens the last folder you used
 
-### Édition
-- ✅ **Éditeur monospace** : Police Consolas pour une meilleure lisibilité
-- ✅ **Annuler/Refaire** : Ctrl+Z / Ctrl+Y
-- ✅ **Recherche** : Ctrl+F pour rechercher du texte
-- ✅ **Détection de modifications** : Astérisque (*) dans le titre si modifié
-- ✅ **Confirmation avant fermeture** : Si le fichier a été modifié
+### Quick Files
+- ✅ **Quick selection** : Dropdown list of CHANGELOG and README files
+- ✅ **Auto-detection** : Automatic search in Documentation/ and root
+- ✅ **Relative display** : Relative paths for better readability
 
-### Fichiers rapides
-- ✅ **Sélection rapide** : Liste déroulante des CHANGELOG et README
-- ✅ **Auto-détection** : Recherche automatique dans Documentation/ et racine
-- ✅ **Affichage relatif** : Chemins relatifs pour une meilleure lisibilité
+## 🚀 Installation & Usage
 
-## 🚀 Utilisation des sources
+### Using the Compiled Executable
 
-### Installation et configuration
+1. Download the latest release from GitHub
+2. Extract the archive
+3. Run `markdown_viewer.exe`
 
-Pour utiliser le projet à partir des sources, consultez les guides de compilation :
+### Using the Source Code
 
-- 📘 **[Guide de compilation (Français)](Documentation/COMPILATION_FR.md)** - Instructions détaillées en français
-- 📗 **[Compilation guide (English)](Documentation/COMPILATION_EN.md)** - Detailed instructions in English
+For detailed compilation and setup instructions, see:
+- 📗 **[Build Instructions](Documentation/BUILD_INSTRUCTIONS_EN.md)** - Complete setup guide
+- 📗 **[Compilation Guide](Documentation/COMPILATION_EN.md)** - Detailed compilation steps
 
-## ⌨️ Raccourcis clavier
+**Quick start:**
+```bash
+# Clone the repository
+git clone https://github.com/ChristophePelichet/Markdown-Viewer-Editor.git
+cd Markdown-Viewer-Editor
 
-| Raccourci | Action |
-|-----------|--------|
-| **Ctrl+O** | Ouvrir un fichier |
-| **Ctrl+S** | Sauvegarder |
-| **Ctrl+Z** | Annuler |
-| **Ctrl+Y** | Refaire |
-| **Ctrl+F** | Rechercher |
+# Create virtual environment
+python -m venv .venv
 
-## 📚 Aide Markdown intégrée
+# Activate environment (Windows)
+.venv\Scripts\activate
 
-L'application inclut un guide rapide Markdown accessible via le bouton "❓ Aide Markdown" :
+# Install dependencies
+pip install -r requirements.txt
 
-### Exemples de syntaxe
-- **Titres** : `# H1`, `## H2`, `### H3`
-- **Gras** : `**texte**` ou `__texte__`
-- **Italique** : `*texte*` ou `_texte_`
-- **Code** : `` `code inline` ``
-- **Listes** : `- item` ou `1. item`
-- **Liens** : `[texte](url)`
-- **Citations** : `> citation`
-- **Tableaux** : `| Col 1 | Col 2 |`
+# Run the application
+python markdown_viewer.py
+```
 
-## 💾 Sauvegarde
+## ⌨️ Keyboard Shortcuts
 
-### Confirmation automatique
-- ✅ Avant d'ouvrir un autre fichier
-- ✅ Avant de quitter l'application
-- ✅ Message clair avec options : Oui / Non / Annuler
+| Shortcut | Action |
+|----------|--------|
+| **Ctrl+O** | Open file |
+| **Ctrl+S** | Save |
+| **Ctrl+Z** | Undo |
+| **Ctrl+Y** | Redo |
+| **Ctrl+F** | Search |
 
-### Indicateur de modification
-- Le titre de la fenêtre affiche un astérisque (*) si le fichier est modifié
-- Exemple : `📝 Markdown Viewer & Editor - CHANGELOG_FR.md *`
+## 📚 Built-in Markdown Help
 
-## 🎨 Style de prévisualisation
+The application includes a quick Markdown guide accessible via the "❓ Markdown Help" button:
 
-Le rendu HTML utilise un style professionnel inspiré de GitHub :
+### Syntax Examples
+- **Headings** : `# H1`, `## H2`, `### H3`
+- **Bold** : `**text**` or `__text__`
+- **Italic** : `*text*` or `_text_`
+- **Code** : `` `inline code` ``
+- **Lists** : `- item` or `1. item`
+- **Links** : `[text](url)`
+- **Blockquotes** : `> quote`
+- **Tables** : `| Col 1 | Col 2 |`
 
-- ✅ **Typographie** : Segoe UI, ligne de 1.6
-- ✅ **Titres** : Avec bordures inférieures (H1, H2)
-- ✅ **Code** : Fond gris clair, police monospace
-- ✅ **Tableaux** : Bordures, lignes alternées
-- ✅ **Citations** : Bordure bleue à gauche
-- ✅ **Liens** : Couleur bleue GitHub (#0366d6)
-- ✅ **Largeur max** : 900px pour une lecture optimale
+## 💾 Saving
 
-## 🔮 Améliorations futures possibles
+### Automatic Confirmation
+- ✅ Before opening another file
+- ✅ Before closing the application
+- ✅ Clear message with options: Yes / No / Cancel
 
-- [ ] Export PDF depuis la prévisualisation
-- [ ] Export HTML / PDF
-- [ ] Barre d'outils Markdown (boutons gras, italique, etc.)
-- [ ] Mode sombre / clair
-- [ ] Rechercher et remplacer
-- [ ] Support de multiples fichiers ouverts (onglets)
-- [ ] Prévisualisation des images locales
-- [ ] Vérification orthographique
-- [ ] Génération automatique de table des matières
-- [ ] Thèmes de couleurs
-- [ ] Préférences utilisateur
-- [ ] Historique des fichiers récents
-- [ ] Support des plugins Markdown
-- [ ] Auto-complétion Markdown
-- [ ] Aperçu des images
-- [ ] Support du drag & drop
+### Modification Indicator
+- The window title displays an asterisk (*) if the file is modified
+- Example: `📝 Markdown Viewer & Editor - README.md *`
 
-## 📄 Licence
+## 🎨 Preview Style
 
-Projet open-source - Markdown Viewer & Editor
+HTML rendering uses a professional style inspired by GitHub:
 
-## 👤 Auteur
+- ✅ **Typography** : Segoe UI, 1.6 line height
+- ✅ **Headings** : With bottom borders (H1, H2)
+- ✅ **Code** : Light gray background, monospace font
+- ✅ **Tables** : Borders, alternating rows
+- ✅ **Blockquotes** : Blue left border
+- ✅ **Links** : GitHub blue color (#0366d6)
+- ✅ **Max width** : 900px for optimal reading
+
+## 🔧 Technical Details
+
+### Built With
+- **Python 3.13**
+- **PySide6 6.10.0** - Qt6 for Python (GUI framework)
+- **Markdown 3.9** - Markdown to HTML conversion
+- **PyInstaller 6.16.0** - Executable compilation
+
+### Architecture
+- Modern Qt6-based GUI application
+- Real-time Markdown to HTML conversion
+- QSettings for persistent preferences
+- WebEngine for professional HTML rendering
+
+## 🔮 Roadmap
+
+### Planned Features
+- [ ] HTML/PDF export
+- [ ] Markdown toolbar (bold, italic buttons, etc.)
+- [ ] Dark/light mode themes
+- [ ] Search and replace
+- [ ] Multiple open files (tabs)
+- [ ] Local image preview
+- [ ] Spell checking
+- [ ] Automatic table of contents
+- [ ] User preferences dialog
+- [ ] Recent files history
+- [ ] Markdown plugins support
+- [ ] Auto-completion
+- [ ] Drag & drop support
+
+## 📄 License
+
+Open-source project - Markdown Viewer & Editor
+
+## 👤 Author
 
 **Christophe Pelichet**
+
+GitHub: [@ChristophePelichet](https://github.com/ChristophePelichet)
 
 ---
 
 **Version** : v0.100  
-**Date** : 31 octobre 2025  
-**Statut** : ✅ Opérationnel
+**Date** : October 31, 2025  
+**Status** : ✅ Operational
