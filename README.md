@@ -102,7 +102,7 @@ HTML rendering uses a professional style inspired by GitHub:
 
 ## 📄 License
 
-Open-source project - Markdown Viewer & Editor
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👤 Author
 
