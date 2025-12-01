@@ -1,52 +1,56 @@
-# 📋 Changelog / Historique des Versions
+# 📋 Version History (CHANGELOG)
 
-**Projet :** Markdown Viewer & Editor  
-**Auteur :** Christophe Pelichet  
-**Version actuelle :** v0.100
-
----
-
-## 📖 Documentation disponible
-
-Ce projet maintient des changelogs dans plusieurs langues :
-
-### 🇫🇷 Français
-➡️ **[CHANGELOG_FR.md](Documentation/CHANGELOG_FR.md)** - Version française complète
-
-### 🇬🇧 English
-➡️ **[CHANGELOG_EN.md](Documentation/CHANGELOG_EN.md)** - Full English version
+**Project:** Markdown Viewer & Editor  
+**Author:** Christophe Pelichet  
+**Current Version:** v1.0
 
 ---
 
-## 🔍 Aperçu rapide / Quick Overview
+## [1.0] - December 1, 2025
 
-### [0.100] - 31 octobre 2025 / October 31, 2025
+### 🎉 First Production Release
 
-#### 🎉 Version initiale / Initial Release
+#### ✨ New Features
+- **Markdown Viewer** : Real-time preview with professional HTML rendering
+- **Integrated Editor** : Text editor with monospace font (Consolas)
+- **Split View** : Simultaneous display of editor and preview
+- **Quick Files** : Fast selection of CHANGELOG and README files
+- **Complete Markdown Support** :
+  - Headings (H1 to H6)
+  - Formatting (bold, italic, strikethrough)
+  - Lists (ordered and unordered)
+  - Tables with formatting
+  - Code blocks with syntax highlighting
+  - Blockquotes
+  - Links and images
+  - Unicode emojis
+  - Horizontal rules
 
-**Fonctionnalités principales / Main Features:**
-- ✨ Visualisation Markdown en temps réel / Real-time Markdown preview
-- ✨ Éditeur intégré avec support complet / Integrated editor with full support
-- ✨ Interface graphique Qt6 / Qt6 graphical interface
-- ✨ Support des fichiers rapides / Quick files support
-- ✨ Raccourcis clavier / Keyboard shortcuts
-- ✨ Documentation bilingue FR/EN / Bilingual FR/EN documentation
+#### 🛠️ Editing Features
+- **Undo/Redo** : Complete history support (Ctrl+Z / Ctrl+Y)
+- **Text Search** : Built-in search function (Ctrl+F)
+- **Modification Detection** : Visual indicator (*) in title
+- **Smart Save** : Confirmation before closing if unsaved changes
+- **Keyboard Shortcuts** : Full support for standard keyboard shortcuts
+- **Remember Last Directory** : Application remembers the last folder used for file operations
 
-**Technique / Technical:**
-- Python 3.13
-- PySide6 6.10.0
-- Markdown 3.9
-- PyInstaller 6.16.0
+#### 🎨 User Interface
+- **Modern Theme** : Fusion interface with professional styling
+- **Complete Toolbar** : Quick access to main functions
+- **Status Bar** : Display of status information
+- **Professional CSS** : Markdown rendering with GitHub-like style
+- **View Modes** : Switch between split, editor only, or preview only
+
+#### 📚 Documentation
+- **Built-in Markdown Help** : Quick guide to Markdown syntax
 
 ---
 
-## 📚 Plus d'informations / More Information
-
-Pour plus de détails, consultez les changelogs complets dans le dossier `Documentation/`.
-
-For more details, see the complete changelogs in the `Documentation/` folder.
-
----
-
-**Dernière mise à jour / Last update:** 31 octobre 2025  
-**Statut / Status:** ✅ Opérationnel / Operational
+**Symbol Legend:**
+- ✨ New feature
+- 🛠️ Improvement
+- 🐛 Bug fix
+- 🔒 Security
+- 📚 Documentation
+- ⚙️ Technical
+- 🎨 User interface

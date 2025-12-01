@@ -1,6 +1,6 @@
 """
 Markdown Viewer & Editor - Outil de visualisation et édition de fichiers Markdown
-Version: v0.100
+Version: v1.0
 Auteur: Christophe Pelichet
 """
 
@@ -12,7 +12,7 @@ from PySide6.QtWidgets import (
     QPushButton, QTextEdit, QSplitter, QFileDialog, QMessageBox,
     QLabel, QComboBox, QToolBar, QStatusBar
 )
-from PySide6.QtCore import Qt, QSize
+from PySide6.QtCore import Qt, QSize, QSettings
 from PySide6.QtGui import QIcon, QFont, QTextCursor, QAction
 from PySide6.QtWebEngineWidgets import QWebEngineView
 
@@ -33,6 +33,9 @@ class MarkdownViewer(QMainWindow):
         self.current_file = None
         self.modified = False
         
+        # Configuration pour mémoriser les préférences (fonctionne même compilé)
+        self.settings = QSettings("ChristophePelichet", "MarkdownViewerEditor")
+        
         # Timer pour le refresh automatique (évite de rafraîchir à chaque touche)
         from PySide6.QtCore import QTimer
         self.refresh_timer = QTimer()
@@ -45,7 +48,7 @@ class MarkdownViewer(QMainWindow):
         
     def init_ui(self):
         """Initialise l'interface utilisateur"""
-        self.setWindowTitle("📝 Markdown Viewer & Editor - v0.100")
+        self.setWindowTitle("📝 Markdown Viewer & Editor - v1.0")
         self.setMinimumSize(1200, 800)
         
         # Widget central
@@ -297,15 +300,26 @@ class MarkdownViewer(QMainWindow):
             elif reply == QMessageBox.Cancel:
                 return
         
-        base_path = Path(__file__).parent.parent
+        # Récupérer le dernier chemin utilisé ou utiliser le répertoire Documents par défaut
+        default_path = str(Path.home() / "Documents")
+        last_path = self.settings.value("last_directory", default_path)
+        
+        # Debug: afficher le chemin récupéré
+        print(f"[DEBUG] Dernier chemin: {last_path}")
+        
         file_path, _ = QFileDialog.getOpenFileName(
             self,
             "Ouvrir un fichier Markdown",
-            str(base_path),
+            last_path,
             "Markdown Files (*.md);;All Files (*.*)"
         )
         
         if file_path:
+            # Sauvegarder le répertoire du fichier ouvert
+            new_dir = str(Path(file_path).parent)
+            print(f"[DEBUG] Sauvegarde du chemin: {new_dir}")
+            self.settings.setValue("last_directory", new_dir)
+            self.settings.sync()  # Forcer la synchronisation
             self.load_file(file_path)
             
     def load_file(self, file_path):
@@ -317,6 +331,13 @@ class MarkdownViewer(QMainWindow):
             self.editor.setPlainText(content)
             self.current_file = file_path
             self.modified = False
+            
+            # Sauvegarder le répertoire du fichier chargé
+            new_dir = str(Path(file_path).parent)
+            print(f"[DEBUG] load_file - Sauvegarde du chemin: {new_dir}")
+            self.settings.setValue("last_directory", new_dir)
+            self.settings.sync()  # Forcer la synchronisation
+            
             self.update_title()
             self.update_status(f"Fichier chargé : {Path(file_path).name}")
             self.refresh_preview()
@@ -357,15 +378,20 @@ class MarkdownViewer(QMainWindow):
             
     def save_file_as(self):
         """Sauvegarde sous un nouveau nom"""
-        base_path = Path(__file__).parent.parent
+        # Récupérer le dernier chemin utilisé ou utiliser le répertoire Documents par défaut
+        default_path = str(Path.home() / "Documents")
+        last_path = self.settings.value("last_directory", default_path)
+        
         file_path, _ = QFileDialog.getSaveFileName(
             self,
             "Sauvegarder sous",
-            str(base_path),
+            last_path,
             "Markdown Files (*.md);;All Files (*.*)"
         )
         
         if file_path:
+            # Sauvegarder le répertoire du fichier sauvegardé
+            self.settings.setValue("last_directory", str(Path(file_path).parent))
             self.current_file = file_path
             self.save_file()
             

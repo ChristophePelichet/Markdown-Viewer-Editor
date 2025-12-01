@@ -1,117 +1,108 @@
 # 📝 Markdown Viewer & Editor
 
-> 🇫🇷 **Version française** | **[🇬🇧 English version](Documentation/README_EN.md)**
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white) ![PySide6](https://img.shields.io/badge/PySide6-6.10.0-green?logo=qt&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-yellow) ![Version](https://img.shields.io/badge/Version-1.0-orange) ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?logo=windows&logoColor=white)
 
-**📥 [Télécharger la version v0.100](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v0.100)**
+**📥 [Download version v1.0](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v1.0)**
 
-Outil de visualisation et d'édition de fichiers Markdown avec prévisualisation en temps réel.
+Markdown file viewing and editing tool with real-time preview.
 
-## 🎯 Fonctionnalités
+## 🎯 Features
 
-### Visualisation
-- ✅ **Prévisualisation en temps réel** : Rendu HTML du Markdown avec CSS professionnel
-- ✅ **Split view** : Éditeur à gauche, prévisualisation à droite
-- ✅ **Support complet Markdown** : Tables, code, citations, listes, liens, images
-- ✅ **Coloration syntaxique** : Pour les blocs de code
-- ✅ **Emojis** : Support complet des emojis Unicode
+### Viewing
+- ✅ **Real-time preview** : HTML rendering of Markdown with professional CSS
+- ✅ **Split view** : Editor on the left, preview on the right
+- ✅ **Full Markdown support** : Tables, code, blockquotes, lists, links, images
+- ✅ **Syntax highlighting** : For code blocks
+- ✅ **Emojis** : Full Unicode emoji support
 
-### Édition
-- ✅ **Éditeur monospace** : Police Consolas pour une meilleure lisibilité
-- ✅ **Annuler/Refaire** : Ctrl+Z / Ctrl+Y
-- ✅ **Recherche** : Ctrl+F pour rechercher du texte
-- ✅ **Détection de modifications** : Astérisque (*) dans le titre si modifié
-- ✅ **Confirmation avant fermeture** : Si le fichier a été modifié
+### Editing
+- ✅ **Monospace editor** : Consolas font for better readability
+- ✅ **Undo/Redo** : Ctrl+Z / Ctrl+Y
+- ✅ **Search** : Ctrl+F to search text
+- ✅ **Change detection** : Asterisk (*) in title if modified
+- ✅ **Confirmation before closing** : If the file has been modified
+- ✅ **Remember last directory** : Automatically opens the last folder you used
 
-### Fichiers rapides
-- ✅ **Sélection rapide** : Liste déroulante des CHANGELOG et README
-- ✅ **Auto-détection** : Recherche automatique dans Documentation/ et racine
-- ✅ **Affichage relatif** : Chemins relatifs pour une meilleure lisibilité
+### Quick Files
+- ✅ **Quick selection** : Dropdown list of CHANGELOG and README files
+- ✅ **Auto-detection** : Automatic search in Documentation/ and root
+- ✅ **Relative display** : Relative paths for better readability
 
-## 🚀 Utilisation des sources
+## 🚀 Installation & Usage
 
-### Installation et configuration
+### Using the Compiled Executable
 
-Pour utiliser le projet à partir des sources, consultez les guides de compilation :
+1. Download the latest release from GitHub
+2. Extract the archive
+3. Run `markdown_viewer.exe`
 
-- 📘 **[Guide de compilation (Français)](Documentation/COMPILATION_FR.md)** - Instructions détaillées en français
-- 📗 **[Compilation guide (English)](Documentation/COMPILATION_EN.md)** - Detailed instructions in English
+### Using the Source Code
 
-## ⌨️ Raccourcis clavier
+For detailed compilation and setup instructions, see:
+- 📗 **[Complete Documentation](Documentation/MARKDOWN_VIEWER_DOCUMENTATION.md)** - Full technical documentation
 
-| Raccourci | Action |
-|-----------|--------|
-| **Ctrl+O** | Ouvrir un fichier |
-| **Ctrl+S** | Sauvegarder |
-| **Ctrl+Z** | Annuler |
-| **Ctrl+Y** | Refaire |
-| **Ctrl+F** | Rechercher |
+## ⌨️ Keyboard Shortcuts
 
-## 📚 Aide Markdown intégrée
+| Shortcut | Action |
+|----------|--------|
+| **Ctrl+O** | Open file |
+| **Ctrl+S** | Save |
+| **Ctrl+Z** | Undo |
+| **Ctrl+Y** | Redo |
+| **Ctrl+F** | Search |
 
-L'application inclut un guide rapide Markdown accessible via le bouton "❓ Aide Markdown" :
+## 📚 Built-in Markdown Help
 
-### Exemples de syntaxe
-- **Titres** : `# H1`, `## H2`, `### H3`
-- **Gras** : `**texte**` ou `__texte__`
-- **Italique** : `*texte*` ou `_texte_`
-- **Code** : `` `code inline` ``
-- **Listes** : `- item` ou `1. item`
-- **Liens** : `[texte](url)`
-- **Citations** : `> citation`
-- **Tableaux** : `| Col 1 | Col 2 |`
+The application includes a quick Markdown guide accessible via the "❓ Markdown Help" button:
 
-## 💾 Sauvegarde
+### Syntax Examples
+- **Headings** : `# H1`, `## H2`, `### H3`
+- **Bold** : `**text**` or `__text__`
+- **Italic** : `*text*` or `_text_`
+- **Code** : `` `inline code` ``
+- **Lists** : `- item` or `1. item`
+- **Links** : `[text](url)`
+- **Blockquotes** : `> quote`
+- **Tables** : `| Col 1 | Col 2 |`
 
-### Confirmation automatique
-- ✅ Avant d'ouvrir un autre fichier
-- ✅ Avant de quitter l'application
-- ✅ Message clair avec options : Oui / Non / Annuler
+## 💾 Saving
 
-### Indicateur de modification
-- Le titre de la fenêtre affiche un astérisque (*) si le fichier est modifié
-- Exemple : `📝 Markdown Viewer & Editor - CHANGELOG_FR.md *`
+### Automatic Confirmation
+- ✅ Before opening another file
+- ✅ Before closing the application
+- ✅ Clear message with options: Yes / No / Cancel
 
-## 🎨 Style de prévisualisation
+### Modification Indicator
+- The window title displays an asterisk (*) if the file is modified
+- Example: `📝 Markdown Viewer & Editor - README.md *`
 
-Le rendu HTML utilise un style professionnel inspiré de GitHub :
+## 🎨 Preview Style
 
-- ✅ **Typographie** : Segoe UI, ligne de 1.6
-- ✅ **Titres** : Avec bordures inférieures (H1, H2)
-- ✅ **Code** : Fond gris clair, police monospace
-- ✅ **Tableaux** : Bordures, lignes alternées
-- ✅ **Citations** : Bordure bleue à gauche
-- ✅ **Liens** : Couleur bleue GitHub (#0366d6)
-- ✅ **Largeur max** : 900px pour une lecture optimale
+HTML rendering uses a professional style inspired by GitHub:
 
-## 🔮 Améliorations futures possibles
+- ✅ **Typography** : Segoe UI, 1.6 line height
+- ✅ **Headings** : With bottom borders (H1, H2)
+- ✅ **Code** : Light gray background, monospace font
+- ✅ **Tables** : Borders, alternating rows
+- ✅ **Blockquotes** : Blue left border
+- ✅ **Links** : GitHub blue color (#0366d6)
+- ✅ **Max width** : 900px for optimal reading
 
-- [ ] Export PDF depuis la prévisualisation
-- [ ] Export HTML / PDF
-- [ ] Barre d'outils Markdown (boutons gras, italique, etc.)
-- [ ] Mode sombre / clair
-- [ ] Rechercher et remplacer
-- [ ] Support de multiples fichiers ouverts (onglets)
-- [ ] Prévisualisation des images locales
-- [ ] Vérification orthographique
-- [ ] Génération automatique de table des matières
-- [ ] Thèmes de couleurs
-- [ ] Préférences utilisateur
-- [ ] Historique des fichiers récents
-- [ ] Support des plugins Markdown
-- [ ] Auto-complétion Markdown
-- [ ] Aperçu des images
-- [ ] Support du drag & drop
 
-## 📄 Licence
+## 📄 License
 
-Projet open-source - Markdown Viewer & Editor
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Auteur
+## 👤 Author
 
 **Christophe Pelichet**
 
+🔖 GitHub: [@ChristophePelichet](https://github.com/ChristophePelichet)
+🔖 Linkedin : <https://www.linkedin.com/in/christophepelichet/>
+📨 Email: <cpelichet@protonmail.com>
+
+
 ---
 
-**Version** : v0.100  
-**Date** : 31 octobre 2025  
-**Statut** : ✅ Opérationnel
+**Version** : v1.0  
+**Date** : December 1, 2025  
