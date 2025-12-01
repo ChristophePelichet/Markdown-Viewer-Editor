@@ -1,10 +1,6 @@
 # 📝 Markdown Viewer & Editor
 
-![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)
-![PySide6](https://img.shields.io/badge/PySide6-6.10.0-green?logo=qt&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-![Version](https://img.shields.io/badge/Version-1.0-orange)
-![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?logo=windows&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white) ![PySide6](https://img.shields.io/badge/PySide6-6.10.0-green?logo=qt&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-yellow) ![Version](https://img.shields.io/badge/Version-1.0-orange) ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?logo=windows&logoColor=white)
 
 **📥 [Download version v1.0](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v1.0)**
 
@@ -92,19 +88,6 @@ HTML rendering uses a professional style inspired by GitHub:
 - ✅ **Links** : GitHub blue color (#0366d6)
 - ✅ **Max width** : 900px for optimal reading
 
-## 🔧 Technical Details
-
-### Built With
-- **Python 3.13**
-- **PySide6 6.10.0** - Qt6 for Python (GUI framework)
-- **Markdown 3.9** - Markdown to HTML conversion
-- **PyInstaller 6.16.0** - Executable compilation
-
-### Architecture
-- Modern Qt6-based GUI application
-- Real-time Markdown to HTML conversion
-- QSettings for persistent preferences
-- WebEngine for professional HTML rendering
 
 ## 📄 License
 
@@ -114,10 +97,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Christophe Pelichet**
 
-GitHub: [@ChristophePelichet](https://github.com/ChristophePelichet)
+🔖 GitHub: [@ChristophePelichet](https://github.com/ChristophePelichet)
+🔖 Linkedin : <https://www.linkedin.com/in/christophepelichet/>
+📨 Email: <cpelichet@protonmail.com>
+
 
 ---
 
 **Version** : v1.0  
 **Date** : December 1, 2025  
-**Status** : ✅ Production Ready

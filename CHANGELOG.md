@@ -43,15 +43,6 @@
 
 #### 📚 Documentation
 - **Built-in Markdown Help** : Quick guide to Markdown syntax
-- **Complete README** : Detailed user documentation
-
-#### ⚙️ Technical
-- **Python 3.x** : Developed with modern Python
-- **PySide6** : Qt6 graphical interface
-- **markdown** : Markdown to HTML conversion
-- **Markdown Extensions** : Support for tables, fenced code, TOC, syntax highlighting
-- **Virtual Environment** : Dependency isolation
-- **QSettings** : Persistent user preferences storage
 
 ---
 
