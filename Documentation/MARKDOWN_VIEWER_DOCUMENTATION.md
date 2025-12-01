@@ -1,7 +1,7 @@
 # 📘 Markdown Viewer & Editor - Complete Documentation
 
 **Project:** Markdown Viewer & Editor  
-**Version:** v0.100  
+**Version:** v1.0  
 **Author:** Christophe Pelichet  
 **Date:** December 1, 2025
 
@@ -571,7 +571,7 @@ pyinstaller --debug=all markdown_viewer.spec
 
 See [CHANGELOG.md](../CHANGELOG.md) for complete version history.
 
-**Current Version:** v0.100 (December 1, 2025)
+**Current Version:** v1.0 (December 1, 2025)
 
 ---
 

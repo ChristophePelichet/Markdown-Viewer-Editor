@@ -2,13 +2,13 @@
 
 **Project:** Markdown Viewer & Editor  
 **Author:** Christophe Pelichet  
-**Current Version:** v0.100
+**Current Version:** v1.0
 
 ---
 
-## [0.100] - October 31, 2025
+## [1.0] - December 1, 2025
 
-### 🎉 Initial Release
+### 🎉 First Production Release
 
 #### ✨ New Features
 - **Markdown Viewer** : Real-time preview with professional HTML rendering

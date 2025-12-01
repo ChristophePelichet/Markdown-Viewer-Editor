@@ -1,6 +1,6 @@
 """
 Markdown Viewer & Editor - Outil de visualisation et édition de fichiers Markdown
-Version: v0.100
+Version: v1.0
 Auteur: Christophe Pelichet
 """
 
@@ -48,7 +48,7 @@ class MarkdownViewer(QMainWindow):
         
     def init_ui(self):
         """Initialise l'interface utilisateur"""
-        self.setWindowTitle("📝 Markdown Viewer & Editor - v0.100")
+        self.setWindowTitle("📝 Markdown Viewer & Editor - v1.0")
         self.setMinimumSize(1200, 800)
         
         # Widget central

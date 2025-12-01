@@ -1,6 +1,6 @@
 # 📝 Markdown Viewer & Editor
 
-**📥 [Download version v0.100](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v0.100)**
+**📥 [Download version v1.0](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v1.0)**
 
 Markdown file viewing and editing tool with real-time preview.
 
@@ -149,6 +149,6 @@ GitHub: [@ChristophePelichet](https://github.com/ChristophePelichet)
 
 ---
 
-**Version** : v0.100  
-**Date** : October 31, 2025  
-**Status** : ✅ Operational
+**Version** : v1.0  
+**Date** : December 1, 2025  
+**Status** : ✅ Production Ready
