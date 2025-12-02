@@ -1,6 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-# Exclusions pour réduire la taille
+# Exclusions to reduce size
 excludes = [
     'tkinter',
     '_tkinter',
@@ -67,10 +67,10 @@ a = Analysis(
     runtime_hooks=[],
     excludes=excludes,
     noarchive=False,
-    optimize=2,  # Optimisation maximale
+    optimize=2,  # Maximum optimization
 )
 
-# Filtrer les binaires Qt inutiles pour réduire la taille
+# Filter unused Qt binaries to reduce size
 a.binaries = [x for x in a.binaries if not any([
     x[0].startswith('opengl'),
     x[0].startswith('d3d'),
@@ -91,8 +91,8 @@ a.binaries = [x for x in a.binaries if not any([
     'Qt63D' in x[0],
     'Qt6Charts' in x[0],
     'Qt6DataVisualization' in x[0],
-    'api-ms-win' in x[0],  # Windows API sets redondants
-    'msvcp' in x[0] and not 'msvcp140' in x[0],  # Garder seulement MSVC 2015+
+    'api-ms-win' in x[0],  # Redundant Windows API sets
+    'msvcp' in x[0] and not 'msvcp140' in x[0],  # Keep only MSVC 2015+
 ])]
 
 # Filtrer les données Qt inutiles (locales, traductions, etc.)
@@ -112,8 +112,8 @@ exe = EXE(
     name='markdown_viewer',
     debug=False,
     bootloader_ignore_signals=False,
-    strip=False,  # Strip non disponible sur Windows
-    upx=False,    # UPX désactivé (non installé)
+    strip=False,  # Strip not available on Windows
+    upx=False,    # UPX disabled (not installed)
     console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,

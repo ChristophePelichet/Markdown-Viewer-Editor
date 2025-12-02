@@ -1,7 +1,7 @@
 """
-Markdown Viewer & Editor - Outil de visualisation et édition de fichiers Markdown
+Markdown Viewer & Editor - Markdown file viewer and editor tool
 Version: v1.0.1
-Auteur: Christophe Pelichet
+Author: Christophe Pelichet
 """
 
 import sys
@@ -26,37 +26,37 @@ except ImportError:
 
 
 class MarkdownViewer(QMainWindow):
-    """Fenêtre principale du visualiseur/éditeur Markdown"""
+    """Main window for Markdown viewer/editor"""
     
     def __init__(self):
         super().__init__()
         self.current_file = None
         self.modified = False
         
-        # Configuration pour mémoriser les préférences (fonctionne même compilé)
+        # Configuration to remember preferences (works even when compiled)
         self.settings = QSettings("ChristophePelichet", "MarkdownViewerEditor")
         
-        # Timer pour le refresh automatique (évite de rafraîchir à chaque touche)
+        # Timer for automatic refresh (avoids refreshing on every keystroke)
         from PySide6.QtCore import QTimer
         self.refresh_timer = QTimer()
         self.refresh_timer.setSingleShot(True)
-        self.refresh_timer.setInterval(500)  # 500ms de délai
+        self.refresh_timer.setInterval(500)  # 500ms delay
         self.refresh_timer.timeout.connect(self.refresh_preview)
         
         self.init_ui()
         self.load_quick_files()
         
     def init_ui(self):
-        """Initialise l'interface utilisateur"""
+        """Initialize the user interface"""
         self.setWindowTitle("📝 Markdown Viewer & Editor - v1.0.1")
         self.setMinimumSize(1200, 800)
         
-        # Widget central
+        # Central widget
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
         
-        # Barre de sélection rapide
+        # Quick selection bar
         quick_layout = QHBoxLayout()
         quick_label = QLabel("📂 Fichier rapide :")
         quick_label.setStyleSheet("font-weight: bold;")
@@ -69,7 +69,7 @@ class MarkdownViewer(QMainWindow):
         
         quick_layout.addStretch()
         
-        # Boutons de vue
+        # View buttons
         view_label = QLabel("📐 Vue :")
         view_label.setStyleSheet("font-weight: bold; margin-left: 20px;")
         quick_layout.addWidget(view_label)
@@ -91,17 +91,17 @@ class MarkdownViewer(QMainWindow):
         
         quick_layout.addSpacing(20)
         
-        # Bouton refresh
+        # Refresh button
         refresh_btn = QPushButton("🔄 Actualiser")
         refresh_btn.clicked.connect(self.refresh_preview)
         quick_layout.addWidget(refresh_btn)
         
         layout.addLayout(quick_layout)
         
-        # Splitter principal (éditeur | preview)
+        # Main splitter (editor | preview)
         self.splitter = QSplitter(Qt.Horizontal)
         
-        # Zone d'édition
+        # Editor area
         editor_widget = QWidget()
         editor_layout = QVBoxLayout(editor_widget)
         editor_layout.setContentsMargins(0, 0, 0, 0)
@@ -109,13 +109,13 @@ class MarkdownViewer(QMainWindow):
         self.editor = QTextEdit()
         self.editor.setFont(QFont("Consolas", 11))
         self.editor.setLineWrapMode(QTextEdit.WidgetWidth)
-        self.editor.setPlaceholderText("✏️ Éditeur - Tapez ou ouvrez un fichier Markdown...")
+        self.editor.setPlaceholderText("✏️ Editor - Type or open a Markdown file...")
         self.editor.textChanged.connect(self.on_text_changed)
         editor_layout.addWidget(self.editor)
         
         self.splitter.addWidget(editor_widget)
         
-        # Zone de prévisualisation
+        # Preview area
         preview_widget = QWidget()
         preview_layout = QVBoxLayout(preview_widget)
         preview_layout.setContentsMargins(0, 0, 0, 0)
@@ -193,32 +193,32 @@ class MarkdownViewer(QMainWindow):
         
         self.splitter.addWidget(preview_widget)
         
-        # Ratio 50/50
+        # 50/50 ratio
         self.splitter.setSizes([600, 600])
         
         layout.addWidget(self.splitter)
         
-        # Barre d'état
+        # Status bar
         self.statusBar = QStatusBar()
         self.setStatusBar(self.statusBar)
-        self.update_status("Prêt")
+        self.update_status("Ready")
         
-        # Toolbar (après la création de l'éditeur)
+        # Toolbar (after editor creation)
         self.create_toolbar()
         
     def create_toolbar(self):
-        """Crée la barre d'outils"""
+        """Create the toolbar"""
         toolbar = QToolBar("Outils")
         toolbar.setIconSize(QSize(24, 24))
         self.addToolBar(toolbar)
         
-        # Ouvrir
+        # Open
         open_action = QAction("📂 Ouvrir", self)
         open_action.setShortcut("Ctrl+O")
         open_action.triggered.connect(self.open_file)
         toolbar.addAction(open_action)
         
-        # Sauvegarder
+        # Save
         save_action = QAction("💾 Sauvegarder", self)
         save_action.setShortcut("Ctrl+S")
         save_action.triggered.connect(self.save_file)
@@ -226,13 +226,13 @@ class MarkdownViewer(QMainWindow):
         
         toolbar.addSeparator()
         
-        # Annuler
+        # Undo
         undo_action = QAction("↶ Annuler", self)
         undo_action.setShortcut("Ctrl+Z")
         undo_action.triggered.connect(self.editor.undo)
         toolbar.addAction(undo_action)
         
-        # Refaire
+        # Redo
         redo_action = QAction("↷ Refaire", self)
         redo_action.setShortcut("Ctrl+Y")
         redo_action.triggered.connect(self.editor.redo)
@@ -240,7 +240,7 @@ class MarkdownViewer(QMainWindow):
         
         toolbar.addSeparator()
         
-        # Rechercher
+        # Find
         find_action = QAction("🔍 Rechercher", self)
         find_action.setShortcut("Ctrl+F")
         find_action.triggered.connect(self.find_text)
@@ -248,18 +248,18 @@ class MarkdownViewer(QMainWindow):
         
         toolbar.addSeparator()
         
-        # Aide Markdown
+        # Markdown help
         help_action = QAction("❓ Aide Markdown", self)
         help_action.triggered.connect(self.show_markdown_help)
         toolbar.addAction(help_action)
         
     def load_quick_files(self):
-        """Charge la liste des fichiers rapides (CHANGELOG, README)"""
+        """Load the list of quick files (CHANGELOG, README)"""
         base_path = Path(__file__).parent
         
         quick_files = []
         
-        # Rechercher les fichiers CHANGELOG et README
+        # Search for CHANGELOG and README files
         patterns = ['CHANGELOG*.md', 'README*.md']
         folders = [
             base_path / 'Documentation',
@@ -276,13 +276,13 @@ class MarkdownViewer(QMainWindow):
         # Trier par nom
         quick_files.sort(key=lambda x: x[0])
         
-        # Ajouter au combo
+        # Add to combo
         self.quick_combo.addItem("-- Sélectionnez un fichier --", "")
         for display, full_path in quick_files:
             self.quick_combo.addItem(display, full_path)
             
     def load_quick_file(self, text):
-        """Charge un fichier depuis la sélection rapide"""
+        """Load a file from quick selection"""
         if text == "-- Sélectionnez un fichier --":
             return
             
@@ -291,7 +291,7 @@ class MarkdownViewer(QMainWindow):
             self.load_file(file_path)
             
     def open_file(self):
-        """Ouvre un fichier Markdown"""
+        """Open a Markdown file"""
         if self.modified:
             reply = QMessageBox.question(
                 self,
@@ -305,12 +305,12 @@ class MarkdownViewer(QMainWindow):
             elif reply == QMessageBox.Cancel:
                 return
         
-        # Récupérer le dernier chemin utilisé ou utiliser le répertoire Documents par défaut
+        # Get last used path or use Documents directory as default
         default_path = str(Path.home() / "Documents")
         last_path = self.settings.value("last_directory", default_path)
         
-        # Debug: afficher le chemin récupéré
-        print(f"[DEBUG] Dernier chemin: {last_path}")
+        # Debug: display retrieved path
+        print(f"[DEBUG] Last path: {last_path}")
         
         file_path, _ = QFileDialog.getOpenFileName(
             self,
@@ -328,7 +328,7 @@ class MarkdownViewer(QMainWindow):
             self.load_file(file_path)
             
     def load_file(self, file_path):
-        """Charge le contenu d'un fichier"""
+        """Load file content"""
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
@@ -355,7 +355,7 @@ class MarkdownViewer(QMainWindow):
             )
             
     def save_file(self):
-        """Sauvegarde le fichier actuel"""
+        """Save the current file"""
         if not self.current_file:
             self.save_file_as()
             return
@@ -382,7 +382,7 @@ class MarkdownViewer(QMainWindow):
             )
             
     def save_file_as(self):
-        """Sauvegarde sous un nouveau nom"""
+        """Save with a new name"""
         # Récupérer le dernier chemin utilisé ou utiliser le répertoire Documents par défaut
         default_path = str(Path.home() / "Documents")
         last_path = self.settings.value("last_directory", default_path)
@@ -401,28 +401,28 @@ class MarkdownViewer(QMainWindow):
             self.save_file()
             
     def on_text_changed(self):
-        """Appelé quand le texte est modifié"""
+        """Called when text is modified"""
         self.modified = True
         self.update_title()
-        # Relancer le timer pour refresh automatique (avec délai)
+        # Restart timer for automatic refresh (with delay)
         self.refresh_timer.start()
         
     def refresh_preview(self):
-        """Actualise la prévisualisation"""
+        """Refresh the preview"""
         if not MARKDOWN_AVAILABLE:
             self.preview.setPlainText(self.editor.toPlainText())
             return
             
         content = self.editor.toPlainText()
         
-        # Sauvegarder la position de défilement avant de rafraîchir
+        # Save scroll position before refreshing
         def save_scroll_position():
             scroll_js = "document.documentElement.scrollTop || document.body.scrollTop;"
             self.preview.page().runJavaScript(scroll_js, self.on_scroll_saved)
         
         save_scroll_position()
         
-        # Convertir Markdown en HTML
+        # Convert Markdown to HTML
         html = markdown.markdown(
             content,
             extensions=[
@@ -434,7 +434,7 @@ class MarkdownViewer(QMainWindow):
             ]
         )
         
-        # CSS pour le rendu
+        # CSS for rendering
         css = """
         <style>
             body {
@@ -520,17 +520,17 @@ class MarkdownViewer(QMainWindow):
         self.preview.setHtml(full_html)
     
     def on_scroll_saved(self, scroll_pos):
-        """Callback après sauvegarde de la position de scroll"""
+        """Callback after saving scroll position"""
         self.saved_scroll_pos = scroll_pos if scroll_pos else 0
         
     def on_load_finished(self, ok):
-        """Appelé quand la page est chargée - restaure la position de scroll"""
+        """Called when page is loaded - restores scroll position"""
         if ok and hasattr(self, 'saved_scroll_pos') and self.saved_scroll_pos > 0:
             restore_js = f"window.scrollTo(0, {self.saved_scroll_pos});"
             self.preview.page().runJavaScript(restore_js)
         
     def find_text(self):
-        """Recherche de texte simple"""
+        """Simple text search"""
         from PySide6.QtWidgets import QInputDialog
         
         text, ok = QInputDialog.getText(
@@ -555,7 +555,7 @@ class MarkdownViewer(QMainWindow):
                 )
                 
     def show_markdown_help(self):
-        """Affiche l'aide Markdown"""
+        """Display Markdown help"""
         help_text = """
 <h2>📝 Guide rapide Markdown</h2>
 
@@ -665,10 +665,10 @@ def hello():
 
 
 def main():
-    """Point d'entrée principal"""
+    """Main entry point"""
     app = QApplication(sys.argv)
     
-    # Style moderne
+    # Modern style
     app.setStyle('Fusion')
     
     viewer = MarkdownViewer()
