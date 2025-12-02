@@ -133,7 +133,7 @@ class MarkdownViewer(QMainWindow):
             <head>
                 <style>
                     body {
-                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-family: 'Segoe UI', 'Segoe UI Emoji', Tahoma, Geneva, Verdana, sans-serif;
                         padding: 40px;
                         text-align: center;
                         color: #666;
@@ -170,11 +170,11 @@ class MarkdownViewer(QMainWindow):
             </head>
             <body>
                 <div>
-                    <h1>�️ Prévisualisation Markdown</h1>
+                    <h1>&#128196; Prévisualisation Markdown</h1>
                     <p>Ouvrez un fichier Markdown ou sélectionnez un fichier rapide ci-dessus.</p>
                     <p>La prévisualisation s'affichera automatiquement ici.</p>
                     <div class="hint">
-                        <p><strong>⌨️ Raccourcis clavier :</strong></p>
+                        <p><strong>&#9000; Raccourcis clavier :</strong></p>
                         <p>Ctrl+O : Ouvrir | Ctrl+S : Sauvegarder | Ctrl+F : Rechercher</p>
                     </div>
                 </div>
@@ -438,7 +438,7 @@ class MarkdownViewer(QMainWindow):
         css = """
         <style>
             body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: 'Segoe UI', 'Segoe UI Emoji', Tahoma, Geneva, Verdana, sans-serif;
                 line-height: 1.6;
                 padding: 20px;
                 max-width: 900px;

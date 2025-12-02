@@ -13,6 +13,10 @@
   - Preview now maintains scroll position when editing content
   - Implemented JavaScript-based scroll position saving and restoration
   - Improves editing experience when working on long documents
+- **Emoji Display** : Fixed emoji rendering in preview window
+  - Added Segoe UI Emoji font support
+  - Converted HTML emojis to numeric entities for better compatibility
+  - Ensures consistent emoji display across all Windows versions
 
 ### ⚡ Performance Improvements
 - **Executable Size Optimization** : Optimized compiled .exe size (~200MB)
