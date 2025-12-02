@@ -13,10 +13,14 @@
   - Preview now maintains scroll position when editing content
   - Implemented JavaScript-based scroll position saving and restoration
   - Improves editing experience when working on long documents
-- **Compiled Executable** : Fixed PyInstaller configuration issues
-  - Restored critical modules (argparse, xml) required by PySide6 and markdown
-  - Application now starts correctly when compiled to .exe
-  - Removed overly aggressive module exclusions that prevented startup
+
+### ⚡ Performance Improvements
+- **Executable Size Optimization** : Optimized compiled .exe size (~200MB)
+  - Extended module exclusion list (asyncio, jupyter, tornado, etc.)
+  - Enhanced Qt binaries filtering (removed unused Qt modules)
+  - Optimized QtWebEngine locales (EN-US and FR-FR only)
+  - Filtered redundant Windows API sets and MSVC libraries
+  - Aggressive DLL filtering to remove unnecessary dependencies
 
 ---
 
