@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white) ![PySide6](https://img.shields.io/badge/PySide6-6.10.0-green?logo=qt&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-yellow) ![Version](https://img.shields.io/badge/Version-1.0-orange) ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?logo=windows&logoColor=white)
 
-**📥 [Download version v1.0](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v1.0)**
+**📥 [Download version v1.0.1](https://github.com/ChristophePelichet/Markdown-Viewer-Editor/releases/tag/v1.0.1)**
 
 Markdown file viewing and editing tool with real-time preview.
 
