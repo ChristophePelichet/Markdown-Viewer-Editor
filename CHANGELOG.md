@@ -15,11 +15,12 @@
   - Improves editing experience when working on long documents
 
 ### ⚡ Performance Improvements
-- **Executable Size Optimization** : Reduced compiled .exe size from 200MB to 167MB
+- **Executable Size Optimization** : Optimized compiled .exe size (~200MB)
   - Extended module exclusion list (asyncio, jupyter, tornado, etc.)
   - Enhanced Qt binaries filtering (removed unused Qt modules)
   - Optimized QtWebEngine locales (EN-US and FR-FR only)
   - Filtered redundant Windows API sets and MSVC libraries
+  - Aggressive DLL filtering to remove unnecessary dependencies
 
 ---
 
