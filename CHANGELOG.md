@@ -2,7 +2,24 @@
 
 **Project:** Markdown Viewer & Editor  
 **Author:** Christophe Pelichet  
-**Current Version:** v1.0
+**Current Version:** v1.0.1
+
+---
+
+## [1.0.1] - December 2, 2025
+
+### 🐛 Bug Fixes
+- **Preview Scroll Position** : Fixed issue where preview window would scroll to top after each edit
+  - Preview now maintains scroll position when editing content
+  - Implemented JavaScript-based scroll position saving and restoration
+  - Improves editing experience when working on long documents
+
+### ⚡ Performance Improvements
+- **Executable Size Optimization** : Reduced compiled .exe size from 200MB to 167MB
+  - Extended module exclusion list (asyncio, jupyter, tornado, etc.)
+  - Enhanced Qt binaries filtering (removed unused Qt modules)
+  - Optimized QtWebEngine locales (EN-US and FR-FR only)
+  - Filtered redundant Windows API sets and MSVC libraries
 
 ---
 
