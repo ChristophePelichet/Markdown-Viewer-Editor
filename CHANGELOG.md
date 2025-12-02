@@ -2,7 +2,17 @@
 
 **Project:** Markdown Viewer & Editor  
 **Author:** Christophe Pelichet  
-**Current Version:** v1.0
+**Current Version:** v1.0.1
+
+---
+
+## [1.0.1] - December 2, 2025
+
+### 🐛 Bug Fixes
+- **Preview Scroll Position** : Fixed issue where preview window would scroll to top after each edit
+  - Preview now maintains scroll position when editing content
+  - Implemented JavaScript-based scroll position saving and restoration
+  - Improves editing experience when working on long documents
 
 ---
 

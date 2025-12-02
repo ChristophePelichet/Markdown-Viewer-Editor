@@ -1,6 +1,6 @@
 """
 Markdown Viewer & Editor - Outil de visualisation et édition de fichiers Markdown
-Version: v1.0
+Version: v1.0.1
 Auteur: Christophe Pelichet
 """
 
@@ -48,7 +48,7 @@ class MarkdownViewer(QMainWindow):
         
     def init_ui(self):
         """Initialise l'interface utilisateur"""
-        self.setWindowTitle("📝 Markdown Viewer & Editor - v1.0")
+        self.setWindowTitle("📝 Markdown Viewer & Editor - v1.0.1")
         self.setMinimumSize(1200, 800)
         
         # Widget central
@@ -122,6 +122,11 @@ class MarkdownViewer(QMainWindow):
         
         if MARKDOWN_AVAILABLE:
             self.preview = QWebEngineView()
+            
+            # Connecter le signal loadFinished pour restaurer la position de scroll
+            self.preview.loadFinished.connect(self.on_load_finished)
+            self.saved_scroll_pos = 0
+            
             # Initialiser avec une page d'accueil
             welcome_html = """
             <html>
@@ -410,6 +415,13 @@ class MarkdownViewer(QMainWindow):
             
         content = self.editor.toPlainText()
         
+        # Sauvegarder la position de défilement avant de rafraîchir
+        def save_scroll_position():
+            scroll_js = "document.documentElement.scrollTop || document.body.scrollTop;"
+            self.preview.page().runJavaScript(scroll_js, self.on_scroll_saved)
+        
+        save_scroll_position()
+        
         # Convertir Markdown en HTML
         html = markdown.markdown(
             content,
@@ -506,6 +518,16 @@ class MarkdownViewer(QMainWindow):
         
         full_html = f"<html><head>{css}</head><body>{html}</body></html>"
         self.preview.setHtml(full_html)
+    
+    def on_scroll_saved(self, scroll_pos):
+        """Callback après sauvegarde de la position de scroll"""
+        self.saved_scroll_pos = scroll_pos if scroll_pos else 0
+        
+    def on_load_finished(self, ok):
+        """Appelé quand la page est chargée - restaure la position de scroll"""
+        if ok and hasattr(self, 'saved_scroll_pos') and self.saved_scroll_pos > 0:
+            restore_js = f"window.scrollTo(0, {self.saved_scroll_pos});"
+            self.preview.page().runJavaScript(restore_js)
         
     def find_text(self):
         """Recherche de texte simple"""
