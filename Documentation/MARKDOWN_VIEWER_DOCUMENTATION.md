@@ -56,7 +56,7 @@ Markdown-Viewer-Editor/
 │   ├── BUILD_INSTRUCTIONS_EN.md       # Build instructions
 │   ├── COMPILATION_EN.md              # Compilation guide
 │   └── PROJECT_STRUCTURE.md           # Project structure (this file)
-├── markdown_viewer.py                 # Main source code (651 lines)
+├── main.py                            # Main source code (651 lines)
 ├── markdown_viewer.spec               # PyInstaller configuration
 ├── README.md                          # Main documentation
 ├── CHANGELOG.md                       # Version history
@@ -70,7 +70,7 @@ After compilation:
 
 ### Main Files Description
 
-#### `markdown_viewer.py`
+#### `main.py`
 **Type:** Python source code  
 **Lines:** 651  
 **Description:** Main application with PySide6 interface  
@@ -174,7 +174,7 @@ PyInstaller  6.16.0
 
 ```powershell
 # Make sure virtual environment is activated
-python markdown_viewer.py
+python main.py
 ```
 
 ---
@@ -200,7 +200,7 @@ The executable will be generated in: `dist\markdown_viewer.exe`
 .venv\Scripts\Activate.ps1
 
 # Compile in onefile mode
-pyinstaller --onefile --noconsole --name="markdown_viewer" markdown_viewer.py
+pyinstaller --onefile --noconsole --name="markdown_viewer" main.py
 ```
 
 ### Build Options
@@ -315,7 +315,7 @@ pip install -r requirements.txt
 git checkout -b feature/your-feature-name
 
 # 3. Run in development mode
-python markdown_viewer.py
+python main.py
 
 # 4. Make changes and test
 # Edit code, test frequently
@@ -332,7 +332,7 @@ git push origin feature/your-feature-name
 
 1. **Development Testing**:
    ```powershell
-   python markdown_viewer.py
+   python main.py
    ```
 
 2. **Build Testing**:

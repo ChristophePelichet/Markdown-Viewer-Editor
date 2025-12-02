@@ -45,7 +45,7 @@ excludes = [
 ]
 
 a = Analysis(
-    ['markdown_viewer.py'],
+    ['main.py'],
     pathex=[],
     binaries=[],
     datas=[],
