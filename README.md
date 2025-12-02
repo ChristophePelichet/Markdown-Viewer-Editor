@@ -97,12 +97,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Christophe Pelichet**
 
-🔖 GitHub: [@ChristophePelichet](https://github.com/ChristophePelichet)
-🔖 Linkedin : <https://www.linkedin.com/in/christophepelichet/>
-📨 Email: <cpelichet@protonmail.com>
-
+🔖 GitHub: [@ChristophePelichet](https://github.com/ChristophePelichet)  
+🔖 Linkedin : <https://www.linkedin.com/in/christophepelichet/>  
+📨 Email: <cpelichet@protonmail.com>  
 
 ---
 
-**Version** : v1.0  
-**Date** : December 1, 2025  
+**Version** : v1.0.1
+**Date** : December 2, 2025  
